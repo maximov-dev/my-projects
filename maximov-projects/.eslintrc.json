@@ -6,6 +6,10 @@
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
+        "newline-after-var": "error",
+        "quotes": ["error", "single"],
+        "object-curly-spacing": ["error", "always"],
+        "no-return-await": "error",
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
           {
