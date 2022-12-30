@@ -1,0 +1,33 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "noImplicitAny": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "esnext",
+        "lib": ["es2017", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@my-projects/airbit/data-access": [
+                "libs/airbit/data-access/src/index.ts"
+            ],
+            "@my-projects/beatstars/data-access": [
+                "libs/beatstars/data-access/src/index.ts"
+            ],
+            "@my-projects/shared/util-serializers": [
+                "libs/shared/util-serializers/src/index.ts"
+            ]
+        }
+    },
+    "exclude": ["node_modules", "tmp"]
+}
