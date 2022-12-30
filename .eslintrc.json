@@ -18,11 +18,15 @@
             "depConstraints": [
               {
                 "sourceTag": "type:app",
-                "onlyDependOnLibsWithTags": ["type:util"]
+                "onlyDependOnLibsWithTags": ["type:shared", "type:data-access"]
               },
               {
-                "sourceTag": "type:util",
-                "onlyDependOnLibsWithTags": ["type:util"]
+                "sourceTag": "type:shared",
+                "onlyDependOnLibsWithTags": ["type:shared"]
+              }        ,
+              {
+                "sourceTag": "type:data-access",
+                "onlyDependOnLibsWithTags": ["type:shared"]
               }
             ]
           }

@@ -4,9 +4,8 @@ import {
    NormalizedCacheObject,
 } from '@apollo/client';
 import { BeatstarsTrendingSearches } from '../models/beatstars.models';
-import { keysToCamel, toAppError } from '@my-projects/shared/util-serializers';
 import { ApolloError } from '@apollo/client/errors';
-import { AppError } from '../../../../../shared/util-serializers/src/lib/models/app-error.models';
+import { AppError, keysToCamel, toAppError } from '@my-projects/shared/util-serializers';
 
 export class BeatstarsApi {
    constructor(private client: ApolloClient<NormalizedCacheObject>) {}
