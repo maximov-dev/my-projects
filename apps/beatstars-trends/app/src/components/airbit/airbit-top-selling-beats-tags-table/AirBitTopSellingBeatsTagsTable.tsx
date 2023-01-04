@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Spinner } from '../../shared/spinner/Spinner';
 import { GridWrapper } from '../../shared/grid-wrapper/GridWrapper';
-import { AirbitApi, IAirbitTag } from '@maximov-projects/airbit/data-access';
-import { ITopSellingItem } from '@maximov-projects/airbit/data-access';
+import { AirbitApi, IAirbitTag, ITopSellingItem } from '@my-projects/airbit/data-access';
 
 interface TopSellingBeats { genre: string; tags: string; soldCount: number; plays: number; name: string; }
 interface IAirbitTopSellingBeatTagsProps {

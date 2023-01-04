@@ -16,18 +16,21 @@
             "enforceBuildableLibDependency": true,
             "allow": [],
             "depConstraints": [
-              {
-                "sourceTag": "type:app",
-                "onlyDependOnLibsWithTags": ["type:shared", "type:data-access"]
-              },
-              {
-                "sourceTag": "type:shared",
-                "onlyDependOnLibsWithTags": ["type:shared"]
-              }        ,
-              {
-                "sourceTag": "type:data-access",
-                "onlyDependOnLibsWithTags": ["type:shared"]
-              }
+               {
+                  "sourceTag": "type:app",
+                  "onlyDependOnLibsWithTags": [
+                     "type:shared",
+                     "type:data-access"
+                  ]
+               },
+               {
+                  "sourceTag": "type:shared",
+                  "onlyDependOnLibsWithTags": ["type:shared"]
+               },
+               {
+                  "sourceTag": "type:data-access",
+                  "onlyDependOnLibsWithTags": ["type:shared"]
+               }
             ]
           }
         ]
