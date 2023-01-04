@@ -1,4 +1,4 @@
-import {AppError} from "./models/app-error.models";
+import { AppError } from './models/app-error.models';
 
 const isArray = (a: unknown) => {
   return Array.isArray(a);
@@ -40,4 +40,5 @@ const keysToCamel = (objectToTransform: any) => {
 
 const toAppError = (name: string, message: string, details: unknown): AppError => ({ name, message, details });
 
-export { keysToCamel, toAppError, AppError };
+export type { AppError };
+export { keysToCamel, toAppError };
