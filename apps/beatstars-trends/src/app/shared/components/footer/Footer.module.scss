@@ -1,0 +1,6 @@
+@use "../../../shared/styles/app-colors";
+
+.footer {
+  background-color: app-colors.$color-gray;
+  height: 150px;
+}

@@ -1,0 +1,15 @@
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'Aversa';
+  src: url('../src/assets/fonts/AversaVectorRegular.woff2') format('woff2'),
+  url('../src/assets/fonts/AversaVectorRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

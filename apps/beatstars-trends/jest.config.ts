@@ -1,11 +1,11 @@
 /* eslint-disable */
 export default {
-  displayName: 'beatstars-trends',
-  preset: '../../jest.preset.js',
-  transform: {
-    '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nrwl/react/plugins/jest',
-    '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nrwl/next/babel'] }],
-  },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/apps/beatstars-trends',
+   displayName: 'beatstars-trends',
+   preset: '../../jest.preset.js',
+   transform: {
+      '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nrwl/react/plugins/jest',
+      '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nrwl/react/babel'] }],
+   },
+   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+   coverageDirectory: '../../coverage/apps/beatstars-trends',
 };

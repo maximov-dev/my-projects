@@ -14,7 +14,7 @@ export class BeatstarsApi {
       query: DocumentNode,
       variables: Record<string, unknown> = {}
    ): Promise<{
-      trendingSearches: BeatstarsTrendingSearches | null;
+      trendingSearches: BeatstarsTrendingSearches[] | null;
       loading: boolean;
       error: AppError | null;
    }> {
