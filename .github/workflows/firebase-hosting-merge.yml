@@ -7,16 +7,33 @@ name: Deploy to Firebase Hosting on merge
     branches:
       - main
 jobs:
-  build_and_deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repo
+        uses: actions/checkout@master
+      - name: Install dependencies
       - run: npm ci
+      - name: Building Beatstars Trends
       - run: npx nx run beatstars-trends:build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Archive Beatstars Trends Artifact
+        uses: actions/upload-artifact@master
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BEATSTARS_TRENDS }}'
-          channelId: live
-          entryPoint: "./apps/beatstars-trends/"
-          projectId: beatstars-trends
+          name: beatstars-trends-artifact
+          path: dist/apps/beatstars-trends/
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@master
+      - name: Download artifact
+        uses: actions/download-artifact@master
+        with:
+          name: beatstars-trends-artifact
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BEATSTARS_TRENDS }}
