@@ -2,20 +2,21 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on merge
-'on':
+on:
   push:
     branches:
       - main
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@master
       - name: Install dependencies
-      - run: npm ci
+        run: npm ci
       - name: Building Beatstars Trends
-      - run: npx nx run beatstars-trends:build
+        run: npx nx run beatstars-trends:build
       - name: Archive Beatstars Trends Artifact
         uses: actions/upload-artifact@master
         with:
@@ -23,6 +24,7 @@ jobs:
           path: dist/apps/beatstars-trends/
 
   deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
