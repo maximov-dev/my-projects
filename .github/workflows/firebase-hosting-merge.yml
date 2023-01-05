@@ -36,10 +36,9 @@ jobs:
           name: beatstars-trends-artifact
           path: apps/beatstars-trends/dist
       - name: Deploy to Firebase
-        run: cd apps/beatstars-trends/
-      - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
         env:
+          PROJECT_PATH: ./apps/beatstars-trends/
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BEATSTARS_TRENDS }}
