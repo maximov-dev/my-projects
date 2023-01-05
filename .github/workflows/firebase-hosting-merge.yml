@@ -26,6 +26,7 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Checkout repo
         uses: actions/checkout@master
@@ -33,6 +34,9 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: beatstars-trends-artifact
+          path: apps/beatstars-trends/dist
+      - name: Deploy to Firebase
+        run: cd apps/beatstars-trends/
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
