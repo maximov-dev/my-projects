@@ -65,7 +65,7 @@ const Beatstars = () => {
            })
          : [];
    };
-   const columns = ['tagName', 'resultsCount', 'usersRequests'];
+   const columns = [{ value: 'tagName', canCopy: true }, {value: 'resultsCount', canCopy: false}, {value: 'usersRequests', canCopy: false}];
 
    if (loading) {
       return <Spinner />;

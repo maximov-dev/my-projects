@@ -24,6 +24,9 @@
          "@my-projects/beatstars/data-access": [
             "libs/beatstars/data-access/src/index.ts"
          ],
+         "@my-projects/libs/shared/common": [
+            "libs/libs/shared/common/src/index.ts"
+         ],
          "@my-projects/shared/util-serializers": [
             "libs/shared/util-serializers/src/index.ts"
          ]

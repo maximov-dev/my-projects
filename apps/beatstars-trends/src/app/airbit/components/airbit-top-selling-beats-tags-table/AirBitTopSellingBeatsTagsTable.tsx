@@ -40,7 +40,7 @@ const AirbitTopSellingBeatTagsTable = ({ airbitApi }: IAirbitTopSellingBeatTagsP
 
   if (!airbitTopSellingBeatsTags) return <Spinner />;
 
-  const columns = ['name', 'genre', 'tags', 'soldCount', 'plays'];
+  const columns = [{ value:'name', canCopy: false}, { value:'genre', canCopy: false}, { value:'tags', canCopy: true}, { value:'soldCount', canCopy: false}, { value:'plays', canCopy: false}];
 
   return (
     <GridWrapper

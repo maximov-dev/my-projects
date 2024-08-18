@@ -1,10 +1,13 @@
 {
-    "extends": "./tsconfig.json",
-    "compilerOptions": {
-        "outDir": "../../../dist/out-tsc",
-        "declaration": true,
-        "types": []
-    },
-    "include": ["**/*.ts"],
-    "exclude": ["jest.config.ts", "**/*.spec.ts"]
+   "extends": "./tsconfig.json",
+   "compilerOptions": {
+      "outDir": "../../../dist/out-tsc",
+      "declaration": true,
+      "types": []
+   },
+   "include": [
+      "**/*.ts",
+      "../../../apps/beatstars-trends/src/app/shared/components/copy-value-cell/clipboard.ts"
+   ],
+   "exclude": ["jest.config.ts", "**/*.spec.ts"]
 }

@@ -3,6 +3,7 @@ import styles from './Footer.module.scss';
 import { Container } from '@mui/material';
 
 const Footer = () => {
+   const date = new Date();
    return (
       <footer className={styles['footer']}>
          <Container className="h-full" maxWidth="lg">
@@ -16,7 +17,7 @@ const Footer = () => {
                   </span>
                </div>
                <div className="text-center">
-                  <a href={'/'}>© 2021 BeatStars Search Trends</a>
+                  <a href={'/'}>© {date.getFullYear()} BeatStars Search Trends</a>
                </div>
             </div>
          </Container>

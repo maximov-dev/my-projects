@@ -37,7 +37,7 @@ const AirbitMostPopularTable = ({ airbitApi }: IAirbitMostPopularProps) => {
 
   if (!airbitPopularTags) return <Spinner />;
 
-  const columns = ['id', 'name', 'beatsCount'];
+  const columns = [{ value: 'id', canCopy: false}, { value: 'name', canCopy: false}, { value: 'beatsCount', canCopy: false}];
 
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(event.target.value);
