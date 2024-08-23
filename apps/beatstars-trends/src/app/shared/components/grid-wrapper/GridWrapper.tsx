@@ -22,6 +22,7 @@ export function GridWrapper<T>({
    data,
    columns,
    children,
+   
 }: GridWrapperProps<T>) {
    const agGridColumns = columns.map((column) => {
       const cellRenderer = column.canCopy ? CopyCellComponent : undefined;

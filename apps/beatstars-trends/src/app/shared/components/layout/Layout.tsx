@@ -1,10 +1,11 @@
-import React, { ReactNode } from 'react';
-import styles from './Layout.module.scss';
-import { Header } from '../header/Header';
 import { Container } from '@mui/material';
-import { Footer } from '../footer/Footer';
-import { BEATSTARS_TRENDS_APP, MAIN_ROUTES } from '../../config/app.constant';
+import { ReactNode } from 'react';
 import { NavLink } from 'react-router-dom';
+import { BEATSTARS_TRENDS_APP, MAIN_ROUTES } from '../../config/app.constant';
+import { Footer } from '../footer/Footer';
+import { Header } from '../header/Header';
+import styles from './Layout.module.scss';
+import { Intro } from '../intro/intro';
 
 interface LayoutProps {
    children?: ReactNode;
@@ -36,6 +37,7 @@ const Layout = (props: LayoutProps) => {
       <div className={styles['container']}>
          <Header title={title}>{links}</Header>
          <Container className="h-full" maxWidth="lg">
+            <Intro/>
             <main className={styles['main']}>{props.children}</main>
          </Container>
          <Footer />

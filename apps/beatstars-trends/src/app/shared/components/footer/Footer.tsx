@@ -4,13 +4,14 @@ import { Container } from '@mui/material';
 
 const Footer = () => {
    const date = new Date();
+   
    return (
       <footer className={styles['footer']}>
          <Container className="h-full" maxWidth="lg">
             <div className="flex h-full text-sm font-light text-white justify-around items-center flex-col">
                <div className="text-center">
                   <span>
-                     If you have any questions or suggestions please contact me:
+                     If you have any questions or suggestions please contact me:&nbsp;
                      <a href="mailto:ifeelzbeatz@gmail.com">
                         iFeelzBeatz@gmail.com
                      </a>

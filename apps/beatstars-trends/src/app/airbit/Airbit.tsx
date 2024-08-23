@@ -1,8 +1,7 @@
 import { Container } from '@mui/material';
-import React from 'react';
+import { AirbitApi } from '@my-projects/airbit/data-access';
 import { AirbitMostPopularTable } from './components/airbit-most-popular-table';
 import { AirbitTopSellingBeatTagsTable } from './components/airbit-top-selling-beats-tags-table';
-import { AirbitApi } from '@my-projects/airbit/data-access';
 
 const Airbit = () => {
   const airbitApi = new AirbitApi();

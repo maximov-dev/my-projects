@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import {
    BeatstarsApi,
    BeatstarsTrendingSearches,
@@ -6,6 +5,7 @@ import {
    getQueryFromString,
 } from '@my-projects/beatstars/data-access';
 import { AppError } from '@my-projects/shared/util-serializers';
+import { useEffect, useState } from 'react';
 import { GridWrapper } from '../shared/components/grid-wrapper/GridWrapper';
 import { Spinner } from '../shared/components/spinner/Spinner';
 import { beatStarsApolloClient } from './components/beatstars-graphql-provider/beatstars-graphql.provider';
@@ -65,7 +65,11 @@ const Beatstars = () => {
            })
          : [];
    };
-   const columns = [{ value: 'tagName', canCopy: true }, {value: 'resultsCount', canCopy: false}, {value: 'usersRequests', canCopy: false}];
+   const columns = [
+      { value: 'tagName', canCopy: true },
+      { value: 'resultsCount', canCopy: false },
+      { value: 'usersRequests', canCopy: false },
+   ];
 
    if (loading) {
       return <Spinner />;
